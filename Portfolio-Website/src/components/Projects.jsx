@@ -7,13 +7,13 @@ import AnimatedSection from "./AnimatedSection";
 const projects = [
     {
         title: "TaskMate – AI-Powered Productivity App",
-        image: "/src/icons/headerImage.png",
+        image: "/src/icons/4871715.jpg",
         description:
             "A React Native app that uses AI to suggest daily task priorities, integrates calendar syncing, and includes gamified productivity tracking.",
     },
     {
         title: "EcoTrack – Smart Waste Management System",
-        image: "/src/icons/headerImage.png",
+        image: "/src/icons/6289.jpg",
         description:
             "An IoT-based platform for cities to monitor garbage bins in real-time using sensors and display optimal pickup routes for collection trucks.",
     },
@@ -67,13 +67,13 @@ const Projects = () => {
                             >
                                 <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                                     {/* Front */}
-                                    <div className="absolute w-full h-full backface-hidden bg-white rounded-xl p-4 flex flex-col justify-center items-center">
+                                    <div className="absolute w-full h-full backface-hidden bg-white rounded-xl py-4 flex flex-col justify-center items-center">
                                         <img
                                             src={project.image}
                                             alt={project.title}
-                                            className="rounded-xl h-36 w-full object-cover mb-4 shadow-md"
+                                            className="h-[90%] w-full object-cover mb-4 shadow-md"
                                         />
-                                        <h3 className="text-xl font-semibold text-center text-gray-800">
+                                        <h3 className="text-xl font-semibold text-center  text-gray-800">
                                             {project.title}
                                         </h3>
                                     </div>
@@ -102,7 +102,7 @@ const NextArrow = (props) => {
         <AnimatedSection delay={0.5} >
             <button
                 onClick={onClick}
-                className="absolute top-1/2 right-[-30px] z-10 transform -translate-y-1/2 
+                className="absolute cursor-pointer top-1/2 right-[-30px] z-10 transform -translate-y-1/2 
                  bg-gray-800 text-white w-10 h-10 rounded-full 
                  hover:bg-gray-600 flex items-center justify-center shadow-md"
             >
@@ -118,7 +118,7 @@ const PrevArrow = (props) => {
         <AnimatedSection delay={0.5} >
             <button
                 onClick={onClick}
-                className="absolute top-1/2 left-[-30px] z-10 transform -translate-y-1/2 
+                className="absolute cursor-pointer top-1/2 left-[-30px] z-10 transform -translate-y-1/2 
                  bg-gray-800 text-white w-10 h-10 rounded-full 
                  hover:bg-gray-600 flex items-center justify-center shadow-md"
             >

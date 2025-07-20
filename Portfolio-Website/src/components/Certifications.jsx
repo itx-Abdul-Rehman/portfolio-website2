@@ -7,13 +7,13 @@ import AnimatedSection from "./AnimatedSection";
 const certifications = [
     {
         title: "Meta Front-End Developer Certificate",
-        image: "/src/icons/meta.png",
+        image: "/src/icons/meta.jpg",
         description:
             "Completed a professional certification by Meta covering HTML, CSS, JavaScript, React, and UI design principles through Coursera.",
     },
     {
         title: "Google IT Support Professional Certificate",
-        image: "/src/icons/google.png",
+        image: "/src/icons/google.jpg",
         description:
             "Earned foundational knowledge in computer networking, systems administration, security, and troubleshooting via Google & Coursera.",
     },
@@ -67,11 +67,11 @@ const Certifications = () => {
                             >
                                 <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                                     {/* Front */}
-                                    <div className="absolute w-full h-full backface-hidden bg-white rounded-xl p-4 flex flex-col justify-center items-center">
+                                    <div className="absolute w-full h-full backface-hidden bg-white rounded-xl py-4 flex flex-col justify-center items-center">
                                         <img
                                             src={certification.image}
                                             alt={certification.title}
-                                            className="rounded-xl h-36 w-full object-cover mb-4 shadow-md"
+                                            className="h-[90%] w-full object-cover mb-4 shadow-md"
                                         />
                                         <h3 className="text-xl font-semibold text-center text-gray-800">
                                             {certification.title}
@@ -102,7 +102,7 @@ const NextArrow = (props) => {
         <AnimatedSection delay={0.5} >
             <button
                 onClick={onClick}
-                className="absolute top-1/2 right-[-30px] z-10 transform -translate-y-1/2 
+                className="absolute cursor-pointer top-1/2 right-[-30px] z-10 transform -translate-y-1/2 
                  bg-gray-800 text-white w-10 h-10 rounded-full 
                  hover:bg-gray-600 flex items-center justify-center shadow-md"
             >
@@ -118,7 +118,7 @@ const PrevArrow = (props) => {
         <AnimatedSection delay={0.5} >
             <button
                 onClick={onClick}
-                className="absolute top-1/2 left-[-30px] z-10 transform -translate-y-1/2 
+                className="absolute cursor-pointer top-1/2 left-[-30px] z-10 transform -translate-y-1/2 
                  bg-gray-800 text-white w-10 h-10 rounded-full 
                  hover:bg-gray-600 flex items-center justify-center shadow-md"
             >
