@@ -25,7 +25,6 @@ const products = [
     },
 ];
 
-
 const Products = () => {
     const settings = {
         dots: true,
@@ -36,52 +35,70 @@ const Products = () => {
         autoplay: true,
         autoplaySpeed: 5000,
         centerMode: true,
-        centerPadding: "60px",
+        centerPadding: "150px", // default for large screens
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    centerPadding: "100px",
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    centerPadding: "60px",
+                },
+            },
             {
                 breakpoint: 768,
                 settings: {
                     centerPadding: "30px",
                 },
             },
+            {
+                breakpoint: 480,
+                settings: {
+                    centerPadding: "10px",
+                },
+            },
         ],
     };
 
     return (
-        <div id="products" className="w-full py-20 px-4 md:px-16 bg-gradient-to-b from-white via-slate-100 to-white text-gray-900">
+        <div
+            id="products"
+            className="w-full py-20 px-4 sm:px-8 md:px-12 bg-gradient-to-b from-white via-slate-100 to-white text-gray-900"
+        >
             <AnimatedSection delay={0.3}>
-                <h2 className="text-4xl md:text-5xl font-bold text-center mb-14">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-14">
                     Products
                 </h2>
             </AnimatedSection>
 
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-5xl mx-auto">
                 <Slider {...settings}>
-                    {products.map((products, index) => (
-                        <AnimatedSection delay={0.5}>
-                            <div
-                                key={index}
-                                className="relative w-full h-80 perspective-[1200px] group px-2"
-                            >
+                    {products.map((product, index) => (
+                        <AnimatedSection key={index} delay={0.5}>
+                            <div className="relative w-full h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] perspective-[1200px] group px-2">
                                 <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
-                                    {/* Front */}
-                                    <div className="absolute w-full h-full backface-hidden bg-white rounded-xl py-4 flex flex-col justify-center items-center">
+                                    {/* Front Side */}
+                                    <div className="absolute w-full h-full backface-hidden bg-white rounded-xl py-4 flex flex-col justify-center items-center shadow-md">
                                         <img
-                                            src={products.image}
-                                            alt={products.title}
-                                            className="h-[90%] w-full object-cover mb-4 shadow-md"
+                                            src={product.image}
+                                            alt={product.title}
+                                            className="h-[60%] w-[85%] object-contain mb-4"
                                         />
-                                        <h3 className="text-xl font-semibold text-center text-gray-800">
-                                            {products.title}
+                                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center text-gray-800 px-2">
+                                            {product.title}
                                         </h3>
                                     </div>
 
-                                    {/* Back */}
-                                    <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-xl border border-gray-200 p-6 flex justify-center items-center">
-                                        <p className="text-sm text-gray-600 text-center">
-                                            {products.description}
+                                    {/* Back Side */}
+                                    <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-xl border border-gray-200 p-6 flex justify-center items-center shadow-md">
+                                        <p className="text-sm sm:text-base text-gray-600 text-center">
+                                            {product.description}
                                         </p>
                                     </div>
                                 </div>
@@ -94,40 +111,30 @@ const Products = () => {
     );
 };
 
+const NextArrow = ({ onClick }) => (
+    <AnimatedSection delay={0.5}>
+        <button
+            onClick={onClick}
+            className="absolute top-1/2 right-[-15px] md:right-[-25px] transform -translate-y-1/2 
+                bg-gray-800 text-white w-8 h-8 md:w-10 md:h-10 rounded-full 
+                hover:bg-gray-600 flex items-center justify-center shadow-md z-10"
+        >
+            {`>`}
+        </button>
+    </AnimatedSection>
+);
 
-
-const NextArrow = (props) => {
-    const { onClick } = props;
-    return (
-        <AnimatedSection delay={0.5} >
-            <button
-                onClick={onClick}
-                className="absolute cursor-pointer top-1/2 right-[-30px] z-10 transform -translate-y-1/2 
-                 bg-gray-800 text-white w-10 h-10 rounded-full 
-                 hover:bg-gray-600 flex items-center justify-center shadow-md"
-            >
-                {`>`}
-            </button>
-        </AnimatedSection>
-    );
-};
-
-const PrevArrow = (props) => {
-    const { onClick } = props;
-    return (
-        <AnimatedSection delay={0.5} >
-            <button
-                onClick={onClick}
-                className="absolute cursor-pointer top-1/2 left-[-30px] z-10 transform -translate-y-1/2 
-                 bg-gray-800 text-white w-10 h-10 rounded-full 
-                 hover:bg-gray-600 flex items-center justify-center shadow-md"
-            >
-                {`<`}
-            </button>
-        </AnimatedSection>
-    );
-};
-
+const PrevArrow = ({ onClick }) => (
+    <AnimatedSection delay={0.5}>
+        <button
+            onClick={onClick}
+            className="absolute top-1/2 left-[-15px] md:left-[-25px] transform -translate-y-1/2 
+                bg-gray-800 text-white w-8 h-8 md:w-10 md:h-10 rounded-full 
+                hover:bg-gray-600 flex items-center justify-center shadow-md z-10"
+        >
+            {`<`}
+        </button>
+    </AnimatedSection>
+);
 
 export default Products;
-

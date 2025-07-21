@@ -8,9 +8,9 @@ const Main = () => {
         <div id='home' className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-white text-gray-900">
 
             {/* Left Content */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center mb-10 md:mb-0 pl-15">
+            <div className="w-full md:w-1/2 flex flex-col justify-center mb-10 md:mb-0 md:pl-15 ">
                 <AnimatedSection delay={0.4} >
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight ">
                         Rubab Javaid
                     </h1>
                     <p className="text-base md:text-lg leading-relaxed text-gray-700 text-justify">
