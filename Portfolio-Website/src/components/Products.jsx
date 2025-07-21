@@ -35,7 +35,7 @@ const Products = () => {
         autoplay: true,
         autoplaySpeed: 5000,
         centerMode: true,
-        centerPadding: "150px", // default for large screens
+        centerPadding: "150px",
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: [
