@@ -3,23 +3,27 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AnimatedSection from "./AnimatedSection";
+import quickPay from '../icons/headerImage.png'
+import fitGenie from '../icons/headerImage.png'
+import shopEase from '../icons/headerImage.png'
+
 
 const products = [
     {
         title: "QuickPay – Digital Payment Solution",
-        image: "/src/icons/headerImage.png",
+        image: quickPay,
         description:
             "A secure digital wallet and payment gateway designed for seamless online transactions, bill payments, and peer-to-peer transfers.",
     },
     {
         title: "FitGenie – AI Health Companion",
-        image: "/src/icons/headerImage.png",
+        image: fitGenie,
         description:
             "An AI-powered mobile app that tracks fitness goals, provides personalized workout plans, and integrates with smart health devices.",
     },
     {
         title: "ShopEase – E-Commerce Engine",
-        image: "/src/icons/headerImage.png",
+        image: shopEase,
         description:
             "A customizable e-commerce product for online businesses with support for inventory management, payment integration, and customer analytics.",
     },

@@ -3,23 +3,26 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AnimatedSection from "./AnimatedSection";
+import meta from '../icons/meta.jpg'
+import google from '../icons/google.jpg'
+import amazon from '../icons/aws.png'
 
 const certifications = [
   {
     title: "Meta Front-End Developer Certificate",
-    image: "/src/icons/meta.jpg",
+    image: meta,
     description:
       "Completed a professional certification by Meta covering HTML, CSS, JavaScript, React, and UI design principles through Coursera.",
   },
   {
     title: "Google IT Support Professional Certificate",
-    image: "/src/icons/google.jpg",
+    image: google,
     description:
       "Earned foundational knowledge in computer networking, systems administration, security, and troubleshooting via Google & Coursera.",
   },
   {
     title: "AWS Certified Cloud Practitioner",
-    image: "/src/icons/aws.png",
+    image: amazon,
     description:
       "Certified by Amazon Web Services in basic cloud concepts, pricing models, deployment strategies, and AWS global infrastructure.",
   },

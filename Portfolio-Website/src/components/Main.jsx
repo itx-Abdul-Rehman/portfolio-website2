@@ -1,5 +1,5 @@
 import AnimatedSection from './AnimatedSection';
-import headerImage from '/src/icons/headerImage.png'
+import headerImage from '../icons/headerImage.png'
 
 const Main = () => {
 

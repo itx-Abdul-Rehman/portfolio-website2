@@ -1,22 +1,25 @@
 import React from "react";
 import AnimatedSection from "./AnimatedSection";
+import taskMate from '../icons/4871715.jpg'
+import ecotrack from '../icons/6289.jpg'
+import eduQuest from '../icons/20945449.jpg'
 
 const projects = [
   {
     title: "TaskMate – AI-Powered Productivity App",
-    image: "/src/icons/4871715.jpg",
+    image: taskMate,
     description:
       "A React Native app that uses AI to suggest daily task priorities, integrates calendar syncing, and includes gamified productivity tracking.",
   },
   {
     title: "EcoTrack – Smart Waste Management System",
-    image: "/src/icons/6289.jpg",
+    image: ecotrack,
     description:
       "An IoT-based platform for cities to monitor garbage bins in real-time using sensors and display optimal pickup routes for collection trucks.",
   },
   {
     title: "EduQuest – Gamified Learning Portal",
-    image: "/src/icons/20945449.jpg",
+    image: eduQuest,
     description:
       "A web portal using gamification and quizzes to make learning engaging for students. Built using MERN stack with real-time leaderboard updates.",
   },
