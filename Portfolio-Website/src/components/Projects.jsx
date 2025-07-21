@@ -4,19 +4,19 @@ import AnimatedSection from "./AnimatedSection";
 const projects = [
   {
     title: "TaskMate – AI-Powered Productivity App",
-    image: "/portfolio-website2/src/icons/4871715.jpg",
+    image: "/src/icons/4871715.jpg",
     description:
       "A React Native app that uses AI to suggest daily task priorities, integrates calendar syncing, and includes gamified productivity tracking.",
   },
   {
     title: "EcoTrack – Smart Waste Management System",
-    image: "/portfolio-website2/src/icons/6289.jpg",
+    image: "/src/icons/6289.jpg",
     description:
       "An IoT-based platform for cities to monitor garbage bins in real-time using sensors and display optimal pickup routes for collection trucks.",
   },
   {
     title: "EduQuest – Gamified Learning Portal",
-    image: "/portfolio-website2/src/icons/20945449.jpg",
+    image: "/src/icons/20945449.jpg",
     description:
       "A web portal using gamification and quizzes to make learning engaging for students. Built using MERN stack with real-time leaderboard updates.",
   },
