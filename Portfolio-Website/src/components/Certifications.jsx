@@ -7,19 +7,19 @@ import AnimatedSection from "./AnimatedSection";
 const certifications = [
   {
     title: "Meta Front-End Developer Certificate",
-    image: "/src/icons/meta.jpg",
+    image: "/portfolio-website2/src/icons/meta.jpg",
     description:
       "Completed a professional certification by Meta covering HTML, CSS, JavaScript, React, and UI design principles through Coursera.",
   },
   {
     title: "Google IT Support Professional Certificate",
-    image: "/src/icons/google.jpg",
+    image: "/portfolio-website2/src/icons/google.jpg",
     description:
       "Earned foundational knowledge in computer networking, systems administration, security, and troubleshooting via Google & Coursera.",
   },
   {
     title: "AWS Certified Cloud Practitioner",
-    image: "/src/icons/aws.png",
+    image: "/portfolio-website2/src/icons/aws.png",
     description:
       "Certified by Amazon Web Services in basic cloud concepts, pricing models, deployment strategies, and AWS global infrastructure.",
   },

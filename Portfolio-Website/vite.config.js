@@ -11,5 +11,6 @@ export default defineConfig({
       },
     },
   },
+   base: '/portfolio-website2/',
   plugins: [react(),tailwindcss(),],
 })
